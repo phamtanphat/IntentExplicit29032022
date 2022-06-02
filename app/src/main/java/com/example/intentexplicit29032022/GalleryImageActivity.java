@@ -15,8 +15,10 @@ public class GalleryImageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent != null) {
-            String[] arrNameImages = intent.getStringArrayExtra("array");
-            Log.d("BBB",arrNameImages.length + "");
+//            String[] arrNameImages = intent.getStringArrayExtra("array");
+//            Person person = (Person) intent.getSerializableExtra("object");
+            Person person = (Person) intent.getParcelableExtra("object");
+            Log.d("BBB",person.name + "");
         }
     }
 }

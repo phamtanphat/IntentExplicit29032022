@@ -31,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
         imgPick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Person person = new Person("Tèo");
                 Intent intent = new Intent(MainActivity.this, GalleryImageActivity.class);
-                intent.putExtra("array",arrNameImages);
+//                intent.putExtra("array",arrNameImages);
+                intent.putExtra("object",person);
                 startActivity(intent);
             }
         });
