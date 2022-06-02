@@ -1,13 +1,16 @@
 package com.example.intentexplicit29032022;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
         random = new Random();
         arrNameImages = getResources().getStringArray(R.array.arr_images);
         randomImage(imgRandom);
+        imgPick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GalleryImageActivity.class);
+                intent.putExtra("array",arrNameImages);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
