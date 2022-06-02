@@ -8,6 +8,7 @@ import android.util.Log;
 
 public class GalleryImageActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,10 +16,8 @@ public class GalleryImageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent != null) {
-//            String[] arrNameImages = intent.getStringArrayExtra("array");
-//            Person person = (Person) intent.getSerializableExtra("object");
-            Person person = (Person) intent.getParcelableExtra("object");
-            Log.d("BBB",person.name + "");
+            String[] arrNameImages = intent.getStringArrayExtra("array");
+
         }
     }
 }
